@@ -130,6 +130,7 @@ void toggleMonitor(MyCommandParser::Argument *args, char *response) {
 void printHelp() {
   Serial.println("Commands:");
   Serial.println(F("    h          : help - prints the command set"));
+  Serial.println(F("    <enter>    : repeat last command"));
   Serial.println(F("    f <hz>     : sets the clock frequency to <hz>"));
   Serial.println(F("    c          : toggles the clock on/off"));
   Serial.println(F("    s <cycles> : step the clock for <cycles>"));
