@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is an extended version of Ben Eater's arduino based 6502 monitor. It incorporates clock generation with the same features as his Clock module, i.e. with variable clock frequency and manual stepping. It also adds the ability to generate X number of pulses, which can be handy for Ben's VGA project, and to define breakpoints.
+This is an extended version of Ben Eater's [arduino based 6502 monitor](https://eater.net/downloads/6502-monitor.ino). It incorporates clock generation with the same features as his [clock module](https://eater.net/8bit/clock), i.e. with variable clock frequency and manual stepping. It also adds the ability to generate X number of pulses, which can be handy for Ben's VGA project, and to define breakpoints.
 
 ## Build Instructions
 
@@ -34,7 +34,7 @@ If you wish to pause the clock, enter 'c' again, or just hit "enter" if 'c' was 
 You can change the frequency of the clock while it is running or stopped with the following command, which takes the frequency as its only parameter:
 
 ```
-f 1
+f 1 <enter>
 ```
 
 This sets the frequency to 1 hz. Adjust to your liking!
@@ -48,7 +48,7 @@ You can stop the clock by re-entering the 'c' command.
 The 's' command is used to step the clock. You must supply the number of cycles desired. As a hint, since the 'enter' key repeats the last command, you can single step the clock repeatly using this sequence:
 
 ```
-s 1
+s 1 <enter>
 <enter>
 <enter>
 ...
@@ -59,8 +59,8 @@ s 1
 The 'b' command defines a breakpoint. The only parameter is the address at which the clock will be stopped. The format of the address is HEX.
 
 ```
-b ffc0
-c
+b ffc0 <enter>
+c <enter>
 ```
 
 This last command sequence sets a breakpoint at address "FFC0" and toggles the clock (will run if it was stopped). The clock will keep going until the address hits "FFC0"
